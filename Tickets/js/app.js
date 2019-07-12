@@ -13,7 +13,7 @@ const app = new Vue({
   computed: {
     fullName: function() {
       if (this.firstName && this.lastName) {
-        return this.firstName + ' ' + this.lastName;
+        return `${this.firstName} ${this.lastName}`;
       } else {
         return this.firstName || this.lastName;
       }
@@ -29,7 +29,7 @@ const app = new Vue({
         ticketPluralization = 'ticket';
       }
 
-      return this.ticketQuantity + ' ' + readableTicketType + ' ' + ticketPluralization;
+      return `${this.ticketQuantity} ${readableTicketType} ${ticketPluralization}`;
     }
   }
 });
