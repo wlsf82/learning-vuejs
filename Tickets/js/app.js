@@ -46,5 +46,13 @@ const app = new Vue({
 
       return `${this.ticketQuantity} ${readableTicketType} ${ticketPluralization}`;
     }
+  },
+  watch: {
+    specialRequests: function(newRequests, oldRequests) {
+      if (newRequests.toLowerCase().includes('meet and greet') ||
+          newRequests.toLowerCase().includes('meet-and-greet')) {
+        this.ticketType = 'vip';
+      }
+    }
   }
 });
