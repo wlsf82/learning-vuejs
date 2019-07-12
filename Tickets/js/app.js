@@ -47,6 +47,18 @@ const app = new Vue({
       return `${this.ticketQuantity} ${readableTicketType} ${ticketPluralization}`;
     }
   },
+  methods: {
+    resetFields: function() {
+      this.firstName = '';
+      this.lastName = '';
+      this.email = '';
+      this.ticketQuantity = 1;
+      this.ticketType = 'general';
+      this.referrals = [];
+      this.specialRequests = '';
+      this.purchaseAgreementSigned = false;
+    }
+  },
   watch: {
     specialRequests: function(newRequests, oldRequests) {
       if (newRequests.toLowerCase().includes('meet and greet') ||
