@@ -10,4 +10,3 @@ describe('', function () {
         expect(vueApp).to.exist();
     });
 });
-
