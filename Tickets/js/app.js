@@ -61,8 +61,8 @@ const app = new Vue({
   },
   watch: {
     specialRequests: function(newRequests, oldRequests) {
-      if (newRequests.toLowerCase().includes('meet and greet') ||
-          newRequests.toLowerCase().includes('meet-and-greet')) {
+      if (newRequests.toLowerCase().includes('vegan') ||
+          newRequests.toLowerCase().includes('vegetarian')) {
         this.ticketType = 'vip';
       }
     }
