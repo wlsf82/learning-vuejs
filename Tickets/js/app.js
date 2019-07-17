@@ -45,6 +45,9 @@ const app = new Vue({
       }
 
       return `${this.ticketQuantity} ${readableTicketType} ${ticketPluralization}`;
+    },
+    formIsValid: function() {
+      return this.firstName && this.lastName && this.email && this.purchaseAgreementSigned;
     }
   },
   methods: {
@@ -57,6 +60,9 @@ const app = new Vue({
       this.referrals = [];
       this.specialRequests = '';
       this.purchaseAgreementSigned = false;
+    },
+    submitForm: function() {
+      //
     }
   },
   watch: {

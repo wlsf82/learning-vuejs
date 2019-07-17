@@ -6,8 +6,8 @@
   <link rel="stylesheet" type="text/css" href="./css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Petit+Formal+Script" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer="defer"></script>
-  <script src="./js/app.js" defer="defer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="./js/app.js" defer></script>
 </head>
 <body>
   <div id="app">
@@ -15,7 +15,7 @@
       <img class="logo" src="https://s3.amazonaws.com/codecademy-content/courses/vue-instances/ticket_logo.svg" alt="logo">
       <h1>TICKETBOX</h1>
     </header>
-    <form>
+    <form v-on:reset="resetFields" v-on:submit.prevent="submitForm">
       <div class="form-row">
         <div class="form-field">
           <label for="first-name">First Name</label>
@@ -72,24 +72,24 @@
         </fieldset>
       </div>
       <div class="form-row vertical">
-        <label for="requests">Special Requests</label>
-        <textarea id="requests" v-model.trim="specialRequests" ></textarea>
+        <label for="requests">Special requests</label>
+        <textarea id="requests" v-model.trim="specialRequests"></textarea>
       </div>
       <div class="form-row vertical agreement checkbox">
         <fieldset>
           <legend>Purchase Agreement</legend>
           <p>I, {{ fullName }}, wish to buy {{ ticketDescription }}. I understand that all ticket sales are final.</p>
-          <input type="checkbox" name="agreement" id="agree" />
+          <input type="checkbox" name="agreement" id="agree" v-model="purchaseAgreementSigned" />
           <label for="agree">I Agree</label>
         </fieldset>
       </div>
       <div class="form-row vertical">
         <label for="signature">Signature</label>
-        <input id="signature" class="signature" v-model="fullName"/>
+        <input id="signature" class="signature" v-model="fullName" />
       </div>
       <div>
-        <button type="reset" class="reset" v-on:click.prevent="resetFields">Reset</button>
-        <button type="submit">Confirm Tickets</button>
+        <button type="reset" class="reset">Reset</button>
+        <button type="submit" v-bind:disabled="!formIsValid">Confirm Tickets</button>
       </div>
     </form>
   </div>
