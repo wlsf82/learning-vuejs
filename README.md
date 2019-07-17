@@ -14,6 +14,10 @@ Bellow is a summary of some of the awesome things Vue can do:
 * Make front-end code easier to modify and fix — using readable mustache templates, using built-in heavily-tested [**directives**](https://vuejs.org/v2/api/#Directives), and consolidating repetitive code into components make Vue code less error-prone and easier to fix when errors do occur
 * Make front-end apps fast and responsive — Vue’s use of a **Virtual DOM** makes site updates happen only when they need to and incredibly fast when they do
 
+The app create during this part of the course is available through the following URL:
+
+https://tweets-codecademy.s3.eu-central-1.amazonaws.com/index.html
+
 ## Vue app options object properties
 
 Here’s a brief recap of the [Vue app options object properties](https://vuejs.org/v2/api/#Options-Data) we covered and the use cases for each.
@@ -31,3 +35,7 @@ Here are some of the major takeaways from dealing with forms when using Vue.js:
 * Form event handlers can be added using `v-on:submit` and `v-on:reset`
 * Modifiers can be used to add functionality to directives — most importantly preventing page reload on form submission using `v-on:submit.prevent` and cleaning up form field values using `.number` and `.trim`
 * Form validation can be implemented by setting the value of the `disabled` attribute on a `<button>` to the value of a computed property using `v-bind`
+
+The app create during this part of the course is available through the following URL:
+
+https://ticket-box.s3.eu-central-1.amazonaws.com/index.html
