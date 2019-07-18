@@ -38,4 +38,12 @@ Here are some of the major takeaways from dealing with forms when using Vue.js:
 
 The app create during this part of the course is available through the following URL:
 
+## Styling elements with Vue
+
+Different techniques can be used for dynamically styling Vue elements.
+
+It's possible to dynamically add inline styles using `v-bind:style` with a style object or an array of style objects.
+
+It's also possible to dynamically add classes using `v-bind:class` with a class object or an array of class objects and class name strings.
+
 https://ticket-box.s3.eu-central-1.amazonaws.com/index.html
