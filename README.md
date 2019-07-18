@@ -4,7 +4,7 @@ Sample Vue.js project based on the course [Learn Vue.js](https://www.codecademy.
 
 ## Percentage of completion
 
-75%
+100% 🎉
 
 ## Takeaways
 
