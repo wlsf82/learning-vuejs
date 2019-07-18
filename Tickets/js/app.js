@@ -15,9 +15,8 @@ const app = new Vue({
       get: function() {
         if (this.firstName && this.lastName) {
           return `${this.firstName} ${this.lastName}`;
-        } else {
-          return this.firstName || this.lastName;
         }
+        return this.firstName || this.lastName;
       },
       set: function() {
         const names = newFullName.split(' ');
