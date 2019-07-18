@@ -1,8 +1,8 @@
 const app = new Vue({
   el: '#app',
   data: {
-    firstName: 'First',
-    lastName: 'Last',
+    firstName: '',
+    lastName: '',
     email: '',
     ticketQuantity: 1,
     ticketType: 'general',
