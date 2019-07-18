@@ -52,7 +52,7 @@ const app = new Vue({
       return this.firstName && this.lastName && this.emailIsValid && this.purchaseAgreementSigned;
     },
     submitButtonStyles: function() {
-  		if (this.formIsValid) {
+      if (this.formIsValid) {
         return {
           'background-color': '#4c7ef3',
           'cursor': 'pointer'
