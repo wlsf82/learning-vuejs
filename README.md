@@ -14,9 +14,7 @@ Bellow is a summary of some of the awesome things Vue can do:
 * Make front-end code easier to modify and fix — using readable mustache templates, using built-in heavily-tested [**directives**](https://vuejs.org/v2/api/#Directives), and consolidating repetitive code into components make Vue code less error-prone and easier to fix when errors do occur
 * Make front-end apps fast and responsive — Vue’s use of a **Virtual DOM** makes site updates happen only when they need to and incredibly fast when they do
 
-The app create during this part of the course is available through the following URL:
-
-https://tweets-codecademy.s3.eu-central-1.amazonaws.com/index.html
+> The app create during this part of the course is available through the following URL: https://tweets-codecademy.s3.eu-central-1.amazonaws.com/index.html
 
 ## Vue app options object properties
 
@@ -44,6 +42,4 @@ It's possible to dynamically add inline styles using `v-bind:style` with a style
 
 It's also possible to dynamically add classes using `v-bind:class` with a class object or an array of class objects and class name strings.
 
-The app create during the last three parts of the course is available through the following URL:
-
-https://ticket-box.s3.eu-central-1.amazonaws.com/index.html
+> The app create during the last three parts of the course is available through the following URL: https://ticket-box.s3.eu-central-1.amazonaws.com/index.html
