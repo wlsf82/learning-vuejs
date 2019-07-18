@@ -29,7 +29,7 @@
       <div class="form-row">
         <div class="form-field">
           <label for="email">Email</label>
-          <input type="text" id="email" v-model.trim="email" />
+          <input type="text" id="email" v-model.trim="email" v-bind:style="[touchedEmailStyles, invalidEmailStyles]" />
         </div>
       </div>
       <div class="form-row">
