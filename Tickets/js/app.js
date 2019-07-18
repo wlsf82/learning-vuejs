@@ -49,7 +49,7 @@ const app = new Vue({
       return this.email.includes('@');
     },
     formIsValid: function() {
-      return this.firstName && this.lastName && this.email && this.purchaseAgreementSigned;
+      return this.firstName && this.lastName && this.emailIsValid && this.purchaseAgreementSigned;
     },
     submitButtonStyles: function() {
   		if (this.formIsValid) {
