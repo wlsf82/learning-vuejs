@@ -36,8 +36,6 @@ Here are some of the major takeaways from dealing with forms when using Vue.js:
 * Modifiers can be used to add functionality to directives — most importantly preventing page reload on form submission using `v-on:submit.prevent` and cleaning up form field values using `.number` and `.trim`
 * Form validation can be implemented by setting the value of the `disabled` attribute on a `<button>` to the value of a computed property using `v-bind`
 
-The app create during this part of the course is available through the following URL:
-
 ## Styling elements with Vue
 
 Different techniques can be used for dynamically styling Vue elements.
@@ -45,5 +43,7 @@ Different techniques can be used for dynamically styling Vue elements.
 It's possible to dynamically add inline styles using `v-bind:style` with a style object or an array of style objects.
 
 It's also possible to dynamically add classes using `v-bind:class` with a class object or an array of class objects and class name strings.
+
+The app create during the last three parts of the course is available through the following URL:
 
 https://ticket-box.s3.eu-central-1.amazonaws.com/index.html
