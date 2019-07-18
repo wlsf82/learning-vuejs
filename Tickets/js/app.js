@@ -45,6 +45,9 @@ const app = new Vue({
 
       return `${this.ticketQuantity} ${readableTicketType} ${ticketPluralization}`;
     },
+    emailIsValid: function() {
+      return this.email.includes('@');
+    },
     formIsValid: function() {
       return this.firstName && this.lastName && this.email && this.purchaseAgreementSigned;
     },
