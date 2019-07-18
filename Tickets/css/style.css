@@ -1,5 +1,3 @@
-/* Site-Wide Styles */
-
 html {
   font-size: 14px;
   font-family: 'Oxygen', sans-serif;
@@ -47,7 +45,12 @@ select {
   padding: .71rem;
   margin-right: 1.21rem;
   background-color: #ffffff;
-  border: solid 1px #979797;
+  border: solid 1px #e0e0e0;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
 }
 
 textarea {
@@ -126,21 +129,27 @@ legend {
 }
 
 button {
-  cursor: pointer;
+  cursor: default;
   padding: .85rem 2.29rem;
   border-radius: 4px;
   margin-right: 1.36rem;
-  background-color: #4c7ef3;
+  background-color: gray;
   font-size: 1.14rem;
   color: #ffffff;
   transition: .25s;
 }
 
-button:hover {
+button.active {
+  cursor: pointer;
+  background-color: #4c7ef3;
+}
+
+button.active:hover {
   background-color: #1e5df1;
 }
 
 button.reset {
+  cursor: pointer;
   background-color: #e85b49;
 }
 

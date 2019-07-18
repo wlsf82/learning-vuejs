@@ -91,7 +91,7 @@
         <button type="reset" class="reset">Reset</button>
         <button type="submit"
                 v-bind:disabled="!formIsValid"
-                v-bind:style="submitButtonStyles">Confirm Tickets
+                v-bind:class="{ active: formIsValid }">Confirm Tickets
         </button>
       </div>
     </form>
