@@ -18,7 +18,7 @@ const app = new Vue({
         }
         return this.firstName || this.lastName;
       },
-      set: function() {
+      set: function(newFullName) {
         const names = newFullName.split(' ');
 
         if (names.length >= 2) {
