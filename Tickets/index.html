@@ -91,11 +91,7 @@
         <button type="reset" class="reset">Reset</button>
         <button type="submit"
                 v-bind:disabled="!formIsValid"
-                v-bind:style="{
-                  'background-color': submitButtonColor,
-                  cursor: submitButtonCursor
-                }">
-                  Confirm Tickets
+                v-bind:style="submitButtonStyles">Confirm Tickets
         </button>
       </div>
     </form>

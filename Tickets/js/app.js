@@ -49,19 +49,18 @@ const app = new Vue({
     formIsValid: function() {
       return this.firstName && this.lastName && this.email && this.purchaseAgreementSigned;
     },
-    submitButtonColor: function() {
+    submitButtonStyles: function() {
   		if (this.formIsValid) {
-    		return '#4c7ef3';
+        return {
+          'background-color': '#4c7ef3',
+          'cursor': 'pointer'
+        }
       }
-      return 'gray';
-		},
-    submitButtonCursor: function() {
-  		if (this.formIsValid) {
-    		return 'pointer';
-  		} else {
-    		return 'default';
-  		}
-		}
+      return {
+        'background-color': 'gray',
+        'cursor': 'default'
+      }
+    }
   },
   methods: {
     resetFields: function() {
