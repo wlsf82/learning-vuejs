@@ -24,7 +24,9 @@
     </div>
     <div class="tweets">
       <tweet v-for="tweet in tweets" 
-             v-bind:message="tweet" v-bind:author="username"></tweet>
+             v-bind:message="tweet"
+             v-bind:author="username">
+      </tweet>
     </div>
     <div class="settings">
       <h2>Settings</h2>
