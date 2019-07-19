@@ -1,0 +1,24 @@
+{
+  "name": "learning-vuejs",
+  "version": "1.0.0",
+  "description": "Sample Vue.js project based on the course [Learn Vue.js](https://www.codecademy.com/learn/learn-vue-js), from codecademy PRO.",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/wlsf82/learning-vuejs.git"
+  },
+  "keywords": [
+    "vuejs"
+  ],
+  "author": "Walmyr Filho <wlsf82@gmail.com> (https://walmyr-filho.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/wlsf82/learning-vuejs/issues"
+  },
+  "homepage": "https://gitlab.com/wlsf82/learning-vuejs#readme",
+  "devDependencies": {
+    "cypress": "^3.4.0"
+  }
+}
