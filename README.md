@@ -1,5 +1,7 @@
 # Learning Vue.js
 
+[![pipeline status](https://gitlab.com/wlsf82/learning-vuejs/badges/master/pipeline.svg)](https://gitlab.com/wlsf82/learning-vuejs/commits/master)
+
 Sample Vue.js project based on the course [Learn Vue.js](https://www.codecademy.com/learn/learn-vue-js), from codecademy PRO.
 
 ## Percentage of completion
