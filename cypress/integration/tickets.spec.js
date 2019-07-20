@@ -11,4 +11,8 @@ describe("Tickets", () => {
     cy.get("#email").type("email@example.com");
     cy.get("#requests").type("vegetarian");
   });
+
+  it("selects two tickets", () => {
+    cy.get("#ticket-quantity").select("4");
+  });
 });
