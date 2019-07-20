@@ -19,4 +19,8 @@ describe("Tickets", () => {
   it("selects 'vip' ticket type", () => {
     cy.get("#vip").check();
   });
+
+  it("selects 'social media' checkbox", () => {
+    cy.get("#social-media").check();
+  });
 });
