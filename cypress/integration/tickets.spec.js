@@ -35,4 +35,32 @@ describe("Tickets", () => {
 
     cy.get("#email.invalid").should("exist");
   });
+
+  it("putting it all together, and reseting it all", () => {
+    const firstName = "Walmyr";
+    const lastName = "Filho";
+    cy.get("#first-name").as("firstName").type(firstName);
+    cy.get("#last-name").as("lastName").type(lastName);
+    cy.get("#email").as("email").type("email@example.com");
+
+    cy.get("#ticket-quantity").select("2");
+    cy.get("#vip").check();
+    cy.get("#friend").check();
+
+    cy.get("#requests").as("specialRequests").type("IPA beer");
+
+    cy.get(".agreement p")
+      .should(
+        "contain",
+        `I, ${firstName} ${lastName}, wish to buy 2 VIP tickets.`
+      );
+
+    cy.get("#agree").check();
+
+    cy.get("button[type='submit']").should("not.be.disabled");
+
+    cy.get("button[type='reset']").click();
+
+    cy.get("button[type='submit']").should("be.disabled");
+  });
 });
