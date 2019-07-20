@@ -23,4 +23,10 @@ describe("Tickets", () => {
   it("selects 'social media' checkbox", () => {
     cy.get("#social-media").check();
   });
+
+  it("selects 'friend', and 'publication' checkboxes, then uncheck 'friend'", () => {
+    cy.get("#friend").check();
+    cy.get("#publication").check();
+    cy.get("#friend").uncheck();
+  });
 });
