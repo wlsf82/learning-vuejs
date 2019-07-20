@@ -29,4 +29,10 @@ describe("Tickets", () => {
     cy.get("#publication").check();
     cy.get("#friend").uncheck();
   });
+
+  it("alerts on email without @", () => {
+    cy.get("#email").type("email-example.com");
+
+    cy.get("#email.invalid").should("exist");
+  });
 });
