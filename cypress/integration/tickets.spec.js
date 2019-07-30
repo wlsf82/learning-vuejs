@@ -40,15 +40,15 @@ describe("Tickets", () => {
     const firstName = "Walmyr";
     const lastName = "Filho";
 
-    cy.get("#first-name").as("firstName").type(firstName);
-    cy.get("#last-name").as("lastName").type(lastName);
-    cy.get("#email").as("email").type("email@example.com");
+    cy.get("#first-name").type(firstName);
+    cy.get("#last-name").type(lastName);
+    cy.get("#email").type("email@example.com");
 
     cy.get("#ticket-quantity").select("2");
     cy.get("#vip").check();
     cy.get("#friend").check();
 
-    cy.get("#requests").as("specialRequests").type("IPA beer");
+    cy.get("#requests").type("IPA beer");
 
     cy.get(".agreement p")
       .should(
