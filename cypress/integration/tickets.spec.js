@@ -39,6 +39,7 @@ describe("Tickets", () => {
   it("putting it all together, and reseting it all", () => {
     const firstName = "Walmyr";
     const lastName = "Filho";
+
     cy.get("#first-name").as("firstName").type(firstName);
     cy.get("#last-name").as("lastName").type(lastName);
     cy.get("#email").as("email").type("email@example.com");
