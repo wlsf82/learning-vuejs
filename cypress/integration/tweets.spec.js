@@ -8,4 +8,16 @@ describe("Tweets", () => {
   it("has a visible avatar", () => {
     cy.get(".image-container img").should("be.visible");
   });
+
+  it("increases the number of 'tweets' after a new one is submitted", () => {
+    cy.get(".tweet").its("length").then(numberOfTweetsBefore => {
+      const newTweet = "Yoo-hoo, time for Cypress!";
+
+      cy.get(".new-tweet input").type(newTweet);
+      cy.contains("Add Tweet").click();
+
+      cy.get(".tweet").its("length").should("be.gt", numberOfTweetsBefore);
+      cy.get(".tweet").last().should("contain", newTweet);
+    });
+  });
 });
