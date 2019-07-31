@@ -23,3 +23,8 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("tweet", (text) => {
+  cy.get(".new-tweet input").type(text);
+  cy.contains("Add Tweet").click();
+});
