@@ -20,4 +20,15 @@ describe("Tweets", () => {
       cy.get(".tweet").last().should("contain", newTweet);
     });
   });
+
+  it("tweets using custom command", () => {
+    cy.get(".tweet").its("length").then(numberOfTweetsBefore => {
+      const newTweet = "Yay, custom commands with Cypress!";
+
+      cy.tweet(newTweet);
+
+      cy.get(".tweet").its("length").should("be.gt", numberOfTweetsBefore);
+      cy.get(".tweet").last().should("contain", newTweet);
+    });
+  });
 });
