@@ -9,7 +9,8 @@ const app = new Vue({
     referrals: [],
     specialRequests: '',
     purchaseAgreementSigned: false,
-    requiredFieldClass: 'required'
+    requiredFieldClass: 'required',
+    successMessage: false
   },
   computed: {
     fullName: {
@@ -100,6 +101,10 @@ const app = new Vue({
     }
   },
   methods: {
+    resetAndShowSuccessMessage: function() {
+      this.resetFields();
+      this.successMessage = true;
+    },
     resetFields: function() {
       this.firstName = '';
       this.lastName = '';

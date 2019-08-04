@@ -169,3 +169,9 @@ button.reset {
 button.reset:hover {
   background-color: #ea2e16;
 }
+
+.success {
+  padding: 20px;
+  background-color: green;
+  color: white;
+}
