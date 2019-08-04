@@ -88,7 +88,7 @@ describe("Tickets", () => {
     cy.get("@submitButton").should("be.disabled");
   });
 
-  it.only("shows a success message after submitting the form with all mandatory fields", () => {
+  it("shows a success message after submitting the form with all mandatory fields", () => {
     const customer = {
       firstName: "Walmyr",
       lastName: "Filho",
