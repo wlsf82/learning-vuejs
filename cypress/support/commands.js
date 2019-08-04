@@ -28,3 +28,10 @@ Cypress.Commands.add("tweet", text => {
   cy.get(".new-tweet input").type(text);
   cy.contains("Add Tweet").click();
 });
+
+Cypress.Commands.add("fillMandatoryFields", data => {
+  cy.get("#first-name").type(data.firstName);
+  cy.get("#last-name").type(data.lastName);
+  cy.get("#email").type(data.email);
+  cy.get("#agree").check();
+});

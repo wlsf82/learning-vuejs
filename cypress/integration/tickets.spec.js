@@ -13,7 +13,7 @@ describe("Tickets", () => {
   });
 
   it("selects two tickets", () => {
-    cy.get("#ticket-quantity").select("4");
+    cy.get("#ticket-quantity").select("2");
   });
 
   it("selects 'vip' ticket type", () => {
@@ -39,6 +39,7 @@ describe("Tickets", () => {
   it("putting it all together, and reseting it all", () => {
     const firstName = "Walmyr";
     const lastName = "Filho";
+    const fullName = `${firstName} ${lastName}`;
 
     cy.get("#first-name").type(firstName);
     cy.get("#last-name").type(lastName);
@@ -53,10 +54,12 @@ describe("Tickets", () => {
     cy.get(".agreement p")
       .should(
         "contain",
-        `I, ${firstName} ${lastName}, wish to buy 2 VIP tickets.`
+        `I, ${fullName}, wish to buy 2 VIP tickets.`
       );
 
-    cy.get("#agree").check();
+    cy.get("#agree").click();
+
+    cy.get("#signature").type(fullName)
 
     cy.get("button[type='submit']")
       .as("submitButton")
@@ -65,5 +68,37 @@ describe("Tickets", () => {
     cy.get("button[type='reset']").click();
 
     cy.get("@submitButton").should("be.disabled");
+  });
+
+  it("fills mandatory fields using support command", () => {
+    const customer = {
+      firstName: "Walmyr",
+      lastName: "Filho",
+      email: "talkingabouttesting@gmail.com"
+    };
+
+    cy.fillMandatoryFields(customer);
+
+    cy.get("button[type='submit']")
+      .as("submitButton")
+      .should("not.be.disabled");
+
+    cy.get("#agree").uncheck();
+
+    cy.get("@submitButton").should("be.disabled");
+  });
+
+  it.only("shows a success message after submitting the form with all mandatory fields", () => {
+    const customer = {
+      firstName: "Walmyr",
+      lastName: "Filho",
+      email: "talkingabouttesting@gmail.com"
+    };
+
+    cy.fillMandatoryFields(customer);
+
+    cy.contains("Confirm Tickets").click();
+
+    cy.get(".success p").should("contain", "Ticket(s) successfully ordered.")
   });
 });
