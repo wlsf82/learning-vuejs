@@ -114,6 +114,7 @@ const app = new Vue({
       this.referrals = [];
       this.specialRequests = '';
       this.purchaseAgreementSigned = false;
+      this.successMessage = false;
     }
   }
 });
