@@ -19,6 +19,6 @@
   },
   "homepage": "https://gitlab.com/wlsf82/learning-vuejs#readme",
   "devDependencies": {
-    "cypress": "^3.4.1"
+    "cypress": "^12.7.0"
   }
 }
